@@ -1,0 +1,17 @@
+# Node.js dependencies
+node_modules/
+package-lock.json
+
+# Playwright test artifacts and reports
+test-results/
+playwright-report/
+playwright-reports/
+artifacts/
+*.log
+
+# Environment variables & secrets
+.env
+*.env
+
+# VS Code settings (optional)
+.vscode/
