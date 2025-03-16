@@ -1,0 +1,99 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="29.132894">
+<testsuite name="Tests/purchase_sim.test.js" timestamp="2025-03-16T17:36:51.791Z" hostname="chromium" tests="1" failures="1" skipped="0" time="27.877" errors="0">
+<testcase name="1] Verify the free SIM purchase flow" classname="Tests/purchase_sim.test.js" time="27.877">
+<failure message="purchase_sim.test.js:6:1 1] Verify the free SIM purchase flow" type="FAILURE">
+<![CDATA[  [chromium] › Tests/purchase_sim.test.js:6:1 › 1] Verify the free SIM purchase flow ───────────────
+
+    Error: Buy with GPay Button is NOT visible
+
+       at Base/UIAction.js:33
+
+      31 |         } catch (error) {
+      32 |             console.error(`❌ ${stepName} is NOT visible`);
+    > 33 |             throw new Error(`${stepName} is NOT visible`);  // Force the test to fail
+         |                   ^
+      34 |         }
+      35 |         console.log('-'.repeat(100));
+      36 |     }
+        at DeliveryAndPaymentPage.verifyElementVisible (/Users/testingautomation/Desktop/Playwright/Base/UIAction.js:33:19)
+        at DeliveryAndPaymentPage.buySimCardWithPlan (/Users/testingautomation/Desktop/Playwright/pages/DeliveryAndPaymentPage.js:59:20)
+        at /Users/testingautomation/Desktop/Playwright/Tests/purchase_sim.test.js:22:5
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/Tests-purchase_sim-1-Verify-the-free-SIM-purchase-flow-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[🔄 Clicking: Accept Cookies Button
+✅ Clicked: Accept Cookies Button
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Prepaid Plans Link
+✅ Clicked: Prepaid Plans Link
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Buy Now Button
+✅ Clicked: Buy Now Button
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Checked SIM Card Button
+✅ Clicked: Checked SIM Card Button
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Checkout Now Button
+✅ Clicked: Checkout Now Button
+----------------------------------------------------------------------------------------------------
+🔄 Filling: First Name Field
+✅ Filled: First Name Field with value: Pratik
+----------------------------------------------------------------------------------------------------
+🔄 Filling: Last Name Field
+✅ Filled: Last Name Field with value: Narute
+----------------------------------------------------------------------------------------------------
+🔄 Filling: Email Field
+✅ Filled: Email Field with value: dflkhf@kfdh.com
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Confirm & Continue Button
+✅ Clicked: Confirm & Continue Button
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Enter Address Manually
+✅ Clicked: Enter Address Manually
+----------------------------------------------------------------------------------------------------
+🔄 Filling: Street Name Field
+✅ Filled: Street Name Field with value: sdff
+----------------------------------------------------------------------------------------------------
+🔄 Filling: House/Building No Field
+✅ Filled: House/Building No Field with value: sdfdsfdsf
+----------------------------------------------------------------------------------------------------
+🔄 Filling: Door Number Field
+✅ Filled: Door Number Field with value: dsfdsf
+----------------------------------------------------------------------------------------------------
+🔄 Filling: Postal Code Field
+✅ Filled: Postal Code Field with value: 12345
+----------------------------------------------------------------------------------------------------
+🔄 Filling: City Field
+✅ Filled: City Field with value: fjsdfj
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Confirm & Continue Button
+✅ Clicked: Confirm & Continue Button
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Other Payment Options
+✅ Clicked: Other Payment Options
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Terms & Conditions Checkbox
+✅ Clicked: Terms & Conditions Checkbox
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Updates Checkbox
+✅ Clicked: Updates Checkbox
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Confirm & Pay Button
+✅ Clicked: Confirm & Pay Button
+----------------------------------------------------------------------------------------------------
+🔄 Verifying: Buy with GPay Button
+
+[[ATTACHMENT|../test-results/Tests-purchase_sim-1-Verify-the-free-SIM-purchase-flow-chromium/test-failed-1.png]]
+]]>
+</system-out>
+<system-err>
+<![CDATA[❌ Buy with GPay Button is NOT visible
+]]>
+</system-err>
+</testcase>
+</testsuite>
+</testsuites>

@@ -1,0 +1,13 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test:clean && npm run test:run",
+    "test:clean": "rm -rf playwright-reports test-results",
+    "test:run": "npx playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0"
+  }
+}
