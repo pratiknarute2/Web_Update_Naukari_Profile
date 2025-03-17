@@ -1,7 +1,7 @@
 const { test } = require('@playwright/test');
-const HomePage = require('../pages/HomePage');
-const CheckoutPage = require('../pages/CheckoutPage');
-const DeliveryAndPaymentPage = require('../pages/DeliveryAndPaymentPage');
+const HomePage = require('../Pages/HomePage');
+const CheckoutPage = require('../Pages/CheckoutPage');
+const DeliveryAndPaymentPage = require('../Pages/DeliveryAndPaymentPage');
 
 test('1] Verify the free SIM purchase flow', async ({ page }) => {
     const homePage = new HomePage(page);
