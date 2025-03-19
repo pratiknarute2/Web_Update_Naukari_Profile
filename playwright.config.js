@@ -19,7 +19,7 @@ module.exports = defineConfig({
     { name: 'chromium', use: { browserName: 'chromium' } },
   ],
   fullyParallel: true,
-  workers: 1, // Run tests in parallel
+  workers: 2, // Run tests in parallel
 
   // Configure reports (Saved in 'playwright-reports/' to avoid conflicts)
   reporter: [

@@ -3,6 +3,8 @@ const HomePage = require('../Pages/HomePage');
 const CheckoutPage = require('../Pages/CheckoutPage');
 const DeliveryAndPaymentPage = require('../Pages/DeliveryAndPaymentPage');
 
+
+
 test('1] Verify the free SIM purchase flow', async ({ page }) => {
     const homePage = new HomePage(page);
     const checkoutPage = new CheckoutPage(page);
@@ -21,3 +23,4 @@ test('1] Verify the free SIM purchase flow', async ({ page }) => {
     await deliveryAndPaymentPage.acceptTermsAndConditions();
     await deliveryAndPaymentPage.buySimCardWithPlan();
 });
+

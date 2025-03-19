@@ -1,69 +1,67 @@
 class UIAction {
     async clickElement(locator, stepName) {
-        console.log(`🔄 Clicking: ${stepName}`);
+        process.stdout.write(`\r🔄 Clicking: ${stepName} | `);
         try {
             await locator.click();
-            console.log(`✅ Clicked: ${stepName}`);
+            process.stdout.write(`\r✅ Clicked: ${stepName}   \n`);
         } catch (error) {
-            console.error(`❌ Failed to click ${stepName}: ${error.message}`);
+            process.stdout.write(`\r❌ Failed to click ${stepName}: ${error.message}   \n`);
         }
         console.log('-'.repeat(100));
-
     }
 
     async fillInputField(locator, value, stepName) {
-        console.log(`🔄 Filling: ${stepName}`);
+        process.stdout.write(`\r🔄 Filling: ${stepName} | `);
         try {
             await locator.fill(value);
-            console.log(`✅ Filled: ${stepName} with value: ${value}`);
+            process.stdout.write(`\r✅ Filled: ${stepName} with [value: ${value}]   \n`);
         } catch (error) {
-            console.error(`❌ Failed to fill ${stepName}: ${error.message}`);
+            process.stdout.write(`\r❌ Failed to fill ${stepName}: ${error.message}   \n`);
         }
         console.log('-'.repeat(100));
     }
 
     async verifyElementVisible(locator, stepName) {
-        console.log(`🔄 Verifying: ${stepName}`);
-        
+        process.stdout.write(`\r🔄 Verifying: ${stepName} | `);
         try {
             await expect(locator).toBeVisible({ timeout: 5000 });
-            console.log(`✅ Verified: ${stepName} is visible`);
+            process.stdout.write(`\r✅ Verified: ${stepName} is visible   \n`);
         } catch (error) {
-            console.error(`❌ ${stepName} is NOT visible`);
-            throw new Error(`${stepName} is NOT visible`);  // Force the test to fail
+            process.stdout.write(`\r❌ ${stepName} is NOT visible   \n`);
+            throw new Error(`${stepName} is NOT visible`);
         }
         console.log('-'.repeat(100));
     }
-    
+
     async selectDropdown(locator, value, stepName) {
-        console.log(`🔄 Selecting: ${stepName}`);
+        process.stdout.write(`\r🔄 Selecting: ${stepName}... `);
         try {
             await locator.selectOption(value);
-            console.log(`✅ Selected: ${stepName} with value: ${value}`);
+            process.stdout.write(`\r✅ Selected: ${stepName} with [value: ${value}]   \n`);
         } catch (error) {
-            console.error(`❌ Failed to select ${stepName}: ${error.message}`);
+            process.stdout.write(`\r❌ Failed to select ${stepName}: ${error.message}   \n`);
         }
         console.log('-'.repeat(100));
     }
 
     async checkCheckbox(locator, stepName) {
-        console.log(`🔄 Checking: ${stepName}`);
+        process.stdout.write(`\r🔄 Checking: ${stepName}... `);
         try {
             await locator.check();
-            console.log(`✅ Checked: ${stepName}`);
+            process.stdout.write(`\r✅ Checked: ${stepName}   \n`);
         } catch (error) {
-            console.error(`❌ Failed to check ${stepName}: ${error.message}`);
+            process.stdout.write(`\r❌ Failed to check ${stepName}: ${error.message}   \n`);
         }
         console.log('-'.repeat(100));
     }
 
     async uncheckCheckbox(locator, stepName) {
-        console.log(`🔄 Unchecking: ${stepName}`);
+        process.stdout.write(`\r🔄 Unchecking: ${stepName}... `);
         try {
             await locator.uncheck();
-            console.log(`✅ Unchecked: ${stepName}`);
+            process.stdout.write(`\r✅ Unchecked: ${stepName}   \n`);
         } catch (error) {
-            console.error(`❌ Failed to uncheck ${stepName}: ${error.message}`);
+            process.stdout.write(`\r❌ Failed to uncheck ${stepName}: ${error.message}   \n`);
         }
         console.log('-'.repeat(100));
     }
