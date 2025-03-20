@@ -13,7 +13,6 @@ class CheckoutPage extends UIAction {
         await this.clickElement(this.buyNowButton, "Buy Now Button");
         await this.clickElement(this.checkedSimCardButton, "Checked SIM Card Button");
         await this.clickElement(this.checkoutNowButton, "Checkout Now Button");
-        
     }
 }
 
