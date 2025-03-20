@@ -1,68 +1,62 @@
 class UIAction {
     async clickElement(locator, stepName) {
-        process.stdout.write(`\r🔄 Clicking: ${stepName} | `);
+        const startTime = performance.now();
+
         try {
+            await locator.waitFor({ state: "visible", timeout: 10000 }); // Increased timeout
+            await locator.scrollIntoViewIfNeeded(); // Ensure element is in view
+
+            const foundTime = ((performance.now() - startTime) / 1000).toFixed(2);
+            process.stdout.write(`\r🔄 Clicking: [${stepName}] & found in ${foundTime} sec | `);
+
             await locator.click();
-            process.stdout.write(`\r✅ Clicked: ${stepName}   \n`);
+            process.stdout.write(`✅ Clicked: [${stepName}]\n`);
         } catch (error) {
-            process.stdout.write(`\r❌ Failed to click ${stepName}: ${error.message}   \n`);
+            const errorMessage = `Failed to click [${stepName}] --> ${error.message}`;
+            process.stdout.write(`❌ ${errorMessage}\n`);
+            throw new Error(errorMessage);
         }
+
         console.log('-'.repeat(100));
     }
 
     async fillInputField(locator, value, stepName) {
-        process.stdout.write(`\r🔄 Filling: ${stepName} | `);
+        const startTime = performance.now();
+
         try {
+            await locator.waitFor({ state: "visible", timeout: 10000 }); // Increased timeout
+            await locator.scrollIntoViewIfNeeded(); // Ensure element is in view
+
+            const foundTime = ((performance.now() - startTime) / 1000).toFixed(2);
+            process.stdout.write(`\r🔄 Filling: [${stepName}] & found in ${foundTime} sec | `);
+
             await locator.fill(value);
-            process.stdout.write(`\r✅ Filled: ${stepName} with [value: ${value}]   \n`);
+            process.stdout.write(`✅ Filled: [${stepName}] with [value: ${value}]\n`);
         } catch (error) {
-            process.stdout.write(`\r❌ Failed to fill ${stepName}: ${error.message}   \n`);
+            const errorMessage = `Failed to fill [${stepName}] --> ${error.message}`;
+            process.stdout.write(`❌ ${errorMessage}\n`);
+            throw new Error(errorMessage);
         }
         console.log('-'.repeat(100));
     }
 
     async verifyElementVisible(locator, stepName) {
-        process.stdout.write(`\r🔄 Verifying: ${stepName} | `);
-        try {
-            await expect(locator).toBeVisible({ timeout: 5000 });
-            process.stdout.write(`\r✅ Verified: ${stepName} is visible   \n`);
-        } catch (error) {
-            process.stdout.write(`\r❌ ${stepName} is NOT visible   \n`);
-            throw new Error(`${stepName} is NOT visible`);
-        }
-        console.log('-'.repeat(100));
-    }
+        process.stdout.write(`🔄 Verifying: [${stepName}] | `);
+        const startTime = performance.now();
 
-    async selectDropdown(locator, value, stepName) {
-        process.stdout.write(`\r🔄 Selecting: ${stepName}... `);
         try {
-            await locator.selectOption(value);
-            process.stdout.write(`\r✅ Selected: ${stepName} with [value: ${value}]   \n`);
-        } catch (error) {
-            process.stdout.write(`\r❌ Failed to select ${stepName}: ${error.message}   \n`);
-        }
-        console.log('-'.repeat(100));
-    }
+            await locator.waitFor({ state: "visible", timeout: 10000 }); // Increased timeout
+            await locator.scrollIntoViewIfNeeded(); // Ensure element is in view
 
-    async checkCheckbox(locator, stepName) {
-        process.stdout.write(`\r🔄 Checking: ${stepName}... `);
-        try {
-            await locator.check();
-            process.stdout.write(`\r✅ Checked: ${stepName}   \n`);
+            const endTime = performance.now();
+            const timeTaken = ((endTime - startTime) / 1000).toFixed(2);
+            process.stdout.write(`✅ Found in ${timeTaken} sec | Verified: [${stepName}] is visible\n`);
         } catch (error) {
-            process.stdout.write(`\r❌ Failed to check ${stepName}: ${error.message}   \n`);
+            const errorMessage = `Failed to verify visibility of [${stepName}] --> ${error.message}`;
+            process.stdout.write(`❌ ${errorMessage}\n`);
+            throw new Error(errorMessage);
         }
-        console.log('-'.repeat(100));
-    }
 
-    async uncheckCheckbox(locator, stepName) {
-        process.stdout.write(`\r🔄 Unchecking: ${stepName}... `);
-        try {
-            await locator.uncheck();
-            process.stdout.write(`\r✅ Unchecked: ${stepName}   \n`);
-        } catch (error) {
-            process.stdout.write(`\r❌ Failed to uncheck ${stepName}: ${error.message}   \n`);
-        }
         console.log('-'.repeat(100));
     }
 }

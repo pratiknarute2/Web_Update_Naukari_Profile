@@ -2,9 +2,16 @@ const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
   retries: 0,
-  expect: {
-    timeout: 5000, // Maximum time expect() should wait for a condition.
+  
+  timeout: 60000,  // Set global timeout for the entire test execution (60 seconds)
+  use: {
+    actionTimeout: 10000, // Set timeout for each action (10 seconds)
+    navigationTimeout: 20000, // Set timeout for navigation (20 seconds)
   },
+  expect: {
+    timeout: 8000,  // Set default timeout for assertions (8 seconds)
+  },
+
   use: {
     headless: true,
     launchOptions: {
@@ -19,7 +26,7 @@ module.exports = defineConfig({
     { name: 'chromium', use: { browserName: 'chromium' } },
   ],
   fullyParallel: true,
-  workers: 2, // Run tests in parallel
+  workers: 1, // Run tests in parallel
 
   // Configure reports (Saved in 'playwright-reports/' to avoid conflicts)
   reporter: [
