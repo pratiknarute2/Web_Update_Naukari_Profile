@@ -1,3 +1,4 @@
+const { expect } = require('@playwright/test');
 const UIAction = require('../Base/UIAction');
 
 class DeliveryAndPaymentPage extends UIAction {
@@ -56,8 +57,8 @@ class DeliveryAndPaymentPage extends UIAction {
 
     async buySimCardWithPlan() {
         await this.clickElement(this.confirmPayButton, "Confirm & Pay Button");
-        await this.verifyElementVisible(this.buyWithGPayButton, "Buy with GPay Button");
+        await this.isDisplayed(this.buyWithGPayButton, "Buy with pay button")
     }
-}
+} 
 
 module.exports = DeliveryAndPaymentPage;

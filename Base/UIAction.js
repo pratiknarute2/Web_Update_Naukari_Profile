@@ -1,63 +1,66 @@
+const { expect } = require('@playwright/test');
+
 class UIAction {
     async clickElement(locator, stepName) {
         const startTime = performance.now();
+        process.stdout.write(`🔄 Clicking: ${stepName}...\n`);
 
         try {
-            await locator.waitFor({ state: "visible", timeout: 10000 }); // Increased timeout
+            await locator.waitFor({ state: 'visible', timeout: 10000 }); // Increased timeout
             await locator.scrollIntoViewIfNeeded(); // Ensure element is in view
 
-            const foundTime = ((performance.now() - startTime) / 1000).toFixed(2);
-            process.stdout.write(`\r🔄 Clicking: [${stepName}] & found in ${foundTime} sec | `);
-
+            const timeTaken = ((performance.now() - startTime) / 1000).toFixed(2);
             await locator.click();
-            process.stdout.write(`✅ Clicked: [${stepName}]\n`);
+            process.stdout.write(`✅ Clicked [${stepName}]\n`);
+            process.stdout.write(`⏳ Time taken: ${timeTaken} sec\n`);
         } catch (error) {
-            const errorMessage = `Failed to click [${stepName}] --> ${error.message}`;
-            process.stdout.write(`❌ ${errorMessage}\n`);
+            const errorMessage = `❌ Failed to click [${stepName}] --> ${error.message}`;
+            process.stdout.write(`${errorMessage}\n`);
             throw new Error(errorMessage);
         }
-
         console.log('-'.repeat(100));
     }
 
     async fillInputField(locator, value, stepName) {
         const startTime = performance.now();
+        process.stdout.write(`🔄 Filling: ${stepName}...\n`);
 
         try {
             await locator.waitFor({ state: "visible", timeout: 10000 }); // Increased timeout
             await locator.scrollIntoViewIfNeeded(); // Ensure element is in view
 
-            const foundTime = ((performance.now() - startTime) / 1000).toFixed(2);
-            process.stdout.write(`\r🔄 Filling: [${stepName}] & found in ${foundTime} sec | `);
-
             await locator.fill(value);
-            process.stdout.write(`✅ Filled: [${stepName}] with [value: ${value}]\n`);
+            const timeTaken = ((performance.now() - startTime) / 1000).toFixed(2);
+            process.stdout.write(`✅ Filled [${stepName}] with value: ${value}\n`);
+            process.stdout.write(`⏳ Time taken: ${timeTaken} sec\n`);
         } catch (error) {
-            const errorMessage = `Failed to fill [${stepName}] --> ${error.message}`;
-            process.stdout.write(`❌ ${errorMessage}\n`);
+            const errorMessage = `❌ Failed to fill [${stepName}] --> ${error.message}`;
+            process.stdout.write(`${errorMessage}\n`);
             throw new Error(errorMessage);
         }
         console.log('-'.repeat(100));
     }
 
-    async verifyElementVisible(locator, stepName) {
-        process.stdout.write(`🔄 Verifying: [${stepName}] | `);
+    async isDisplayed(locator, stepName) {
+        process.stdout.write(`🔄 Verifying: ${stepName}...\n`);
         const startTime = performance.now();
-
+    
         try {
-            await locator.waitFor({ state: "visible", timeout: 10000 }); // Increased timeout
-            await locator.scrollIntoViewIfNeeded(); // Ensure element is in view
+            await locator.waitFor({ state: "visible", timeout: 10000 }); // Ensures visibility
+            await locator.scrollIntoViewIfNeeded(); // Ensures element is in view
 
-            const endTime = performance.now();
-            const timeTaken = ((endTime - startTime) / 1000).toFixed(2);
-            process.stdout.write(`✅ Found in ${timeTaken} sec | Verified: [${stepName}] is visible\n`);
+            await expect(locator).toBeVisible(); // ✅ Fixed missing `await`
+            process.stdout.write(`✅ Found [${stepName}]\n`);
         } catch (error) {
-            const errorMessage = `Failed to verify visibility of [${stepName}] --> ${error.message}`;
-            process.stdout.write(`❌ ${errorMessage}\n`);
+            const errorMessage = `❌ Failed to verify visibility of [${stepName}] --> ${error.message}`;
+            process.stdout.write(`${errorMessage}\n`);
             throw new Error(errorMessage);
+        } finally {
+            const timeTaken = ((performance.now() - startTime) / 1000).toFixed(2);
+            process.stdout.write(`⏳ Time taken: ${timeTaken} sec\n`);
+            console.log('-'.repeat(100));
         }
-
-        console.log('-'.repeat(100));
+        
     }
 }
 
