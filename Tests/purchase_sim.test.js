@@ -7,7 +7,7 @@ const DeliveryAndPaymentPage = require('../Pages/DeliveryAndPaymentPage');
 
 
 
-test.fixme('1] Verify the free SIM purchase flow', async ({page}) => {
+test('1] Verify the free SIM purchase flow', async ({page}) => {
     
     const homePage = new HomePage(page);
     const checkoutPage = new CheckoutPage(page);
@@ -27,7 +27,7 @@ test.fixme('1] Verify the free SIM purchase flow', async ({page}) => {
     await deliveryAndPaymentPage.buySimCardWithPlan()
 });
 
-test.fixme('2] Verify side menu list of home page', async({page})=>{
+test('2] Verify side menu list of home page', async({page})=>{
     const homePage = new HomePage(page);
 
     await homePage.open()

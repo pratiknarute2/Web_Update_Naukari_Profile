@@ -48,11 +48,32 @@ class LoginPage extends UIAction {
         expect(loginResponse.ok()).toBeTruthy();
 
         const responseData = await loginResponse.json();
+        console.log("Response of Post Login API:", JSON.stringify(responseData, null, 1));
+
         this.token = responseData.token;
         console.log("Token:", this.token);
 
         return this.token;
     }
+
+    async getProjectAPI(request, token) {
+        const getProjectResponse = await request.get('https://uatnode.kolonizer.in/master/api/projectOrgwise', {
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        });
+    
+        // ✅ Correct syntax for expect
+        expect(getProjectResponse.ok()).toBeTruthy();
+    
+        // ✅ Properly await and log response data
+        const responseData = await getProjectResponse.json();
+        console.log("Response of Get Project API:", JSON.stringify(responseData, null, 2));
+    
+        
+    }
 }
+
 
 module.exports = LoginPage;

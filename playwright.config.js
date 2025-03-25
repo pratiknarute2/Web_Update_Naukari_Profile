@@ -10,7 +10,7 @@ module.exports = defineConfig({
   use: {
     actionTimeout: 10000, // Timeout for each action (10 seconds)
     navigationTimeout: 20000, // Timeout for navigation (20 seconds)
-    headless: false,
+    headless: true,
     launchOptions: {
       args: ['--start-maximized'],
     },
