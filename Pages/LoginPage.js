@@ -1,5 +1,8 @@
 const { expect } = require('@playwright/test');
-const UIAction = require('../Base/UIAction');
+// const fs = require('fs'); // Import File System module
+
+import UIAction from '../Base/UIAction';
+import fs from 'fs'
 
 class LoginPage extends UIAction {
     constructor(page) {
@@ -35,11 +38,10 @@ class LoginPage extends UIAction {
     }
 
     async postLoginAPI(request) {
+        // Read JSON file
+        const loginPayload = JSON.parse(fs.readFileSync('API/Payloads/Login.json', 'utf-8'));           
         const loginResponse = await request.post('https://uatnode.kolonizer.in/master/api/signIn', {
-            data: {
-                username: 'nikhil@kolonizer.com',
-                password: '123'
-            },
+            data: loginPayload,
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -69,10 +71,14 @@ class LoginPage extends UIAction {
     
         // ✅ Properly await and log response data
         const responseData = await getProjectResponse.json();
-        console.log("Response of Get Project API:", JSON.stringify(responseData, null, 2));
-    
+        console.log("Response of Get Project API:", JSON.stringify(responseData, null, 2))
         
     }
+ 
+
+
+
+
 }
 
 

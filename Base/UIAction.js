@@ -62,6 +62,19 @@ class UIAction {
         }
         
     }
+    async expectToBe(actual, expected, errorMessage){
+        console.log(`Actual: ${actual} | Expected: ${expected}`)
+        try{
+            await expect(actual).toBe(expected)
+        }catch(error){
+            const formattedErrorMessage = `❌ ${errorMessage} Expected: ${expected}, but got: ${actual} ==> ${error.message}`;
+            process.stdout.write(`${formattedErrorMessage}\n`);
+            throw new Error(formattedErrorMessage);
+        }finally{
+            console.log('-'.repeat(100));
+        }
+       
+    }
 }
 
 module.exports = UIAction;

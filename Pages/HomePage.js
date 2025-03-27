@@ -1,4 +1,4 @@
-const UIAction = require('../Base/UIAction');
+import UIAction from '../Base/UIAction';
 
 class HomePage extends UIAction {
    
