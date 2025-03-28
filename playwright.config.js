@@ -1,7 +1,7 @@
 const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
-  retries: 2,
+  retries: 0,
   timeout: 60000,  // Global test timeout (60 seconds)
   expect: {
     timeout: 8000,  // Default assertion timeout (8 seconds)
@@ -21,13 +21,15 @@ module.exports = defineConfig({
   },
 
   projects: [
-    { name: 'chromium', use: { browserName: 'chromium' } },
+    { name: 'chromium', use: { browserName: 'chromium' }, testMatch: ['Tests/Kolonizer.test.js'] },
+    { name: 'firefox', use: { browserName: 'firefox' }, testMatch: ['Tests/Lyca.test.js'] }, // Runs test2 only on Firefox
   ],
   
   fullyParallel: true,
-  workers: 5, // Set to 1 for debugging; increase for parallel execution
+  workers: 1, // Set to 1 for debugging; increase for parallel execution
 
   reporter: [
+    ['./custom-reporter.js'], // Use custom reporter
     ['list'], // Console output
     ['html', { outputFolder: 'playwright-reports/html-report', open: 'on-failure' }], // HTML report
     ['json', { outputFile: 'playwright-reports/report.json' }], // JSON report

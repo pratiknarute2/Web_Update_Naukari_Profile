@@ -15,7 +15,7 @@ async function getPayload() {
 }
 
 test.describe('Login', () => {
-    test('1] Login with valid credentials in Kolonizer', async ({ page }) => {
+    test('Login with valid credentials in Kolonizer', async ({ page }) => {
         const login = new LoginPage(page);
         await login.openLogin();
         await login.enterUsername();
@@ -26,7 +26,7 @@ test.describe('Login', () => {
         await page.getByText('Booked').nth(3).click();
     })
 
-    test('2] API Login and integrate with UI Automation using two windows in the same browser', async ({ browser, request }) => {
+    test('API Login and integrate with UI Automation using two windows in the same browser', async ({ browser, request }) => {
         // ✅ Step 1: Create a new browser context (Window 1)
         const context1 = await browser.newContext();
         const page1 = await context1.newPage();
@@ -69,7 +69,7 @@ test.describe('Login', () => {
 });
 
 test.describe('Lead', () => {
-    test('1] Verify Lead details', async ({ request, page }) => {
+    test('Verify Lead details', async ({ request, page }) => {
         const loginPage = new LoginPage(page);
         const token = await loginPage.postLoginAPI(request);
 
