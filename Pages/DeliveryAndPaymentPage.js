@@ -1,5 +1,6 @@
 const { expect } = require('@playwright/test');
-import UIAction from '../Base/UIAction';
+const UIAction = require('../Base/UIAction');
+
 
 class DeliveryAndPaymentPage extends UIAction {
     constructor(page) {

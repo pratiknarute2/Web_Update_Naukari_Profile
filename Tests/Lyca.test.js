@@ -1,7 +1,8 @@
-import { test, expect } from '@playwright/test';
-import HomePage from '../Pages/HomePage.js';
-import CheckoutPage from '../Pages/CheckoutPage.js';
-import DeliveryAndPaymentPage from '../Pages/DeliveryAndPaymentPage.js';
+const { test, expect } = require('@playwright/test');
+const HomePage = require('../Pages/HomePage.js');
+const CheckoutPage = require('../Pages/CheckoutPage.js');
+const DeliveryAndPaymentPage = require('../Pages/DeliveryAndPaymentPage.js');
+
 
 test.describe('Sim Journey', () => {
     test('Verify the free SIM purchase flow', async ({ page }) => {
@@ -25,7 +26,7 @@ test.describe('Sim Journey', () => {
 });
 
 test.describe('Home Page', () => {
-    test('Verify side menu list of home page', async ({ page }) => {
+    test('2] Verify side menu list of home page', async ({ page }) => {
         const homePage = new HomePage(page);
         await homePage.open();
         await homePage.acceptCookies();

@@ -1,4 +1,5 @@
-import UIAction from '../Base/UIAction';
+const UIAction = require('../Base/UIAction');
+
 
 class CheckoutPage extends UIAction {
     constructor(page) {

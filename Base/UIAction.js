@@ -75,6 +75,20 @@ class UIAction {
         }
        
     }
+    async navigateOnURL(page, url) {
+        try {
+            await page.goto(url, { waitUntil: "domcontentloaded" }); // Navigate and wait for the page to load
+            await expect(page).toHaveURL(url, { timeout: 10000 }); // Wait up to 10 seconds
+            process.stdout.write(`✅ Navigate On URL: [${url}]\n`);
+
+        } catch (error) {
+            throw new Error(`❌ Failed to navigate to [${url}]. Error: ${error.message}`);
+        }finally{
+            console.log('-'.repeat(100));
+        }
+    }
+        
+    
 }
 
 module.exports = UIAction;

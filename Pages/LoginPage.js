@@ -1,26 +1,24 @@
 const { expect } = require('@playwright/test');
-// const fs = require('fs'); // Import File System module
-
-import UIAction from '../Base/UIAction';
-import fs from 'fs'
+const fs = require('fs'); // File System module
+const UIAction = require('../Base/UIAction');
 
 class LoginPage extends UIAction {
     constructor(page) {
         super(page);  // Pass page to parent class
-        this.page = page;  
+        this.page = page;
 
         this.username = page.getByRole('textbox', { name: 'Enter Username' });
         this.password = page.getByRole('textbox', { name: 'Enter Password' });
-        this.loginButton = page.getByRole('button', { name: 'login' }); 
-        this.addLeadButton = page.getByRole('button', { name: 'ADD LEAD' }); 
+        this.loginButton = page.getByRole('button', { name: 'login' });
+        this.addLeadButton = page.getByRole('button', { name: 'ADD LEAD' });
     }
 
     async openLogin() {
-        await this.page.goto('https://uatdreamcity.kolonizer.in/login');
+        await this.navigateOnURL(this.page,'https://uatdreamcity.kolonizer.in/login')
     }
 
-    async openDashboard(){
-        await this.page.goto('https://uatdreamcity.kolonizer.in/dashboard/sales-dashboard');
+    async openDashboard() {
+        await this.navigateOnURL(this.page,'https://uatdreamcity.kolonizer.in/dashboard/sales-dashboard')
     }
 
     async enterUsername() {
@@ -39,7 +37,7 @@ class LoginPage extends UIAction {
 
     async postLoginAPI(request) {
         // Read JSON file
-        const loginPayload = JSON.parse(fs.readFileSync('API/Payloads/Login.json', 'utf-8'));           
+        const loginPayload = JSON.parse(fs.readFileSync('API/Payloads/Login.json', 'utf-8'));
         const loginResponse = await request.post('https://uatnode.kolonizer.in/master/api/signIn', {
             data: loginPayload,
             headers: {
@@ -65,21 +63,12 @@ class LoginPage extends UIAction {
                 'Authorization': `Bearer ${token}`
             }
         });
-    
-        // ✅ Correct syntax for expect
+
         expect(getProjectResponse.ok()).toBeTruthy();
-    
-        // ✅ Properly await and log response data
+
         const responseData = await getProjectResponse.json();
-        console.log("Response of Get Project API:", JSON.stringify(responseData, null, 2))
-        
+        console.log("Response of Get Project API:", JSON.stringify(responseData, null, 2));
     }
- 
-
-
-
-
 }
-
 
 module.exports = LoginPage;
