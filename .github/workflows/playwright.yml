@@ -31,7 +31,7 @@ jobs:
         run: npx playwright test --reporter=html  # Run tests & generate report
 
       - name: Upload Playwright Report
-        uses: actions/upload-artifact@v3  # Save the report as an artifact
+        uses: actions/upload-artifact@v3  # Save the report as an artifact (use v2 for stability)
         with:
           name: playwright-report
-          path: playwright-report/  # Path to your report directory
+          path: playwright-reports/  # Path to your report directory
