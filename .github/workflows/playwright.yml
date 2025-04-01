@@ -10,7 +10,7 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest  # Or macos-latest depending on your environment
+    runs-on: macos-latest  # Change to macOS runner as you mentioned using macOS
 
     steps:
       - name: Checkout Repository
