@@ -4,8 +4,8 @@ package-lock.json
 
 # Playwright test artifacts and reports
 test-results/
-playwright-report/
-playwright-reports/
+# playwright-report/
+# playwright-reports/
 artifacts/
 *.log
 
