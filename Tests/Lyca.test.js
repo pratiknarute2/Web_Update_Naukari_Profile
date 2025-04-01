@@ -26,7 +26,7 @@ test.describe('Sim Journey', () => {
 });
 
 test.describe('Home Page', () => {
-    test('2] Verify side menu list of home page', async ({ page }) => {
+    test('Verify side menu list of home page', async ({ page }) => {
         const homePage = new HomePage(page);
         await homePage.open();
         await homePage.acceptCookies();

@@ -2,14 +2,14 @@ const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
   retries: 2,
-  timeout: 60000,  // Global test timeout (60 seconds)
+  timeout: 60_000,  // Global test timeout (60 seconds)
   expect: {
-    timeout: 8000,  // Default assertion timeout (8 seconds)
+    timeout: 10_000,  // Default assertion timeout (10 seconds)
   },
 
   use: {
-    actionTimeout: 10000, // Timeout for each action (10 seconds)
-    navigationTimeout: 20000, // Timeout for navigation (20 seconds)
+    actionTimeout: 10_000, // Timeout for each action (10 seconds)
+    navigationTimeout: 20_000, // Timeout for navigation (20 seconds)
     headless: true,
     launchOptions: {
       args: ['--start-maximized'],

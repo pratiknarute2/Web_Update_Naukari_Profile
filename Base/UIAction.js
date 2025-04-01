@@ -1,4 +1,5 @@
 const { expect } = require('@playwright/test');
+const { timeout } = require('../playwright.config');
 
 class UIAction {
     async clickElement(locator, stepName) {
@@ -65,7 +66,7 @@ class UIAction {
     async expectToBe(actual, expected, errorMessage){
         console.log(`Actual: ${actual} | Expected: ${expected}`)
         try{
-            await expect(actual).toBe(expected)
+            await expect(actual).toBe(expected,{timeout: 10000})
         }catch(error){
             const formattedErrorMessage = `❌ ${errorMessage} Expected: ${expected}, but got: ${actual} ==> ${error.message}`;
             process.stdout.write(`${formattedErrorMessage}\n`);

@@ -44,9 +44,9 @@ class LeadPage extends UIAction{
         actualCount = actualCount.split('of')
         actualCount = actualCount[1].trim()
         actualCount = Number(actualCount)
-        
-        // await expect(actualCount).toBe(139)
-        this.expectToBe(actualCount,expectedCount,'Mismatch in total lead count!')
+
+        await expect(actualCount, '❌ Should be match lead count bet UI and API level').toBe(expectedCount)
+        console.log(`✅ Assertion Passed: Lead count matches between UI and API => Actual:${actualCount} | expected:${expectedCount}`);
     }
 
 }
