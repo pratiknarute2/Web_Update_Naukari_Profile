@@ -8,6 +8,7 @@ on:
     branches:
       - main
 
+
 jobs:
   test:
     runs-on: ubuntu-latest  # Change from macOS to Ubuntu
@@ -33,5 +34,5 @@ jobs:
       - name: Upload Playwright Report
         uses: actions/upload-artifact@v2  # Save the report as an artifact (use v2 for stability)
         with:
-          name: playwright-report
+          name: playwright-reports
           path: playwright-reports/  # Path to your report directory
