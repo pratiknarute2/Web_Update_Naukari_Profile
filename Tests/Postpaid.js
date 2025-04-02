@@ -1,47 +1,23 @@
 (async () => {
     const APIs = {
-        // Done Pages for ==> Home, PLP, PDP, Quick top up, free sim, Help and support, Rates[National, International, Roaming], Add basket
-        1: 'https://www.lycamobile.at/bff/web/pim/v1/get-bundles?type=cvm&draft=false&lang=en',
-        2: 'https://www.lycamobile.at/bff/web/pim/v1/get-bundles?type=ca&draft=false&lang=en',
-        3: 'https://www.lycamobile.at/bff/web/cms/v1/template/roaming-bundles?draft=false&lang=en',
-        4: 'https://www.lycamobile.at/bff/countries/v1/AT/config?draft=false&lang=en',
-        5: 'https://www.lycamobile.at/bff/web/cms/category/v3/header?draft=false&lang=en',
-        6: 'https://www.lycamobile.at/bff/countries/v2/AT?draft=false&lang=en',
-        7: 'https://www.lycamobile.at/bff/web/cms/category/v3/footer?draft=false&lang=en',
-        8: 'https://www.lycamobile.at/bff/web/pim/v1/get-countries?draft=false&lang=en',
-        9: 'https://www.lycamobile.at/bff/web/pim/v1/get-all/topup?draft=false&lang=en',
-        10: 'https://www.lycamobile.at/bff/web/rate/v1/countries/roaming/AT?draft=false&lang=en',
-        11: 'https://www.lycamobile.at/bff/web/rate/v1/countries/roaming/AT',
-        12: 'https://www.lycamobile.at/bff/web/rate/v1/countries/roaming',
-        13: 'https://www.lycamobile.at/bff/web/cms/template/v3/9a724347-6be0-4468-af23-dc24049cdca2?draft=false&lang=en',
-        14: 'https://www.lycamobile.at/bff/web/cms/template/v3/b3b0b3ac-5905-4950-9795-98adfce36f65?draft=false&lang=en',
-        15: 'https://www.lycamobile.at/bff/web/cms/template/v3/389eb180-6e3f-428e-ac48-e0c7571fed1d?draft=false&lang=en',
-        16: 'https://www.lycamobile.at/bff/payment/v1/apm-list/SIM?draft=false&lang=en',
-        17: 'https://www.lycamobile.at/bff/web/pim/v1/product/2040?draft=false&lang=en',
-        18: 'https://www.lycamobile.at/bff/web/pim/v1/product/2207?draft=false&lang=en',
-        19: 'https://www.lycamobile.at/bff/web/pim/v1/product/2208?draft=false&lang=en',
-        20: 'https://www.lycamobile.at/bff/web/pim/v1/product/1911?draft=false&lang=en',
-        21: 'https://www.lycamobile.at/bff/web/pim/v1/product/2057?draft=false&lang=en',
-        22: 'https://www.lycamobile.at/bff/web/rate/v1/national-rates?draft=false&lang=en',
-        23: 'https://www.lycamobile.at/bff/web/rate/v1/countries/international/AT?draft=false&lang=en',
-        24: 'https://www.lycamobile.at/bff/web/rate/v1/international-rates?only_popular_countries=true&draft=false&lang=en',
-        25: 'https://www.lycamobile.at/bff/web/cms/template/v3/f538c9ed-fff5-4b1c-a896-617cf31960a7?draft=false&lang=en',
-        26: 'https://www.lycamobile.at/bff/web/rate/v1/countries/zone-wise?draft=false&lang=en',
-        27: 'https://www.lycamobile.at/bff/web/cms/template/v3/d38eabc3-9f0d-4a77-9318-e4bd1df63643?draft=false&lang=en',
-        28: 'https://www.lycamobile.at/bff/web/cms/template/v3/04743b28-63d4-4dc5-9f69-78d581cd2e36?draft=false&lang=en',
-        29: 'https://www.lycamobile.at/bff/web/cms/template/v3/a0e9d659-4bf1-4425-9d61-7b49b57eb416?draft=false&lang=en'
-
+        1: 'https://paymonthly-ukstage.ldsvcplatform.com/app/api_v1/GeneralSettings/settings?TRANSACTION_ID=&COUNTRY_CODE=UK&COUNTRY_REQ=GBR&API_VERSION=api_v1&BUNDLE_CATEGROY=Post%20Paid%20Bundles&LANG=en',
+        2: 'https://paymonthly-ukstage.ldsvcplatform.com/app/api_v1/PostpaidBundles/getAllHomeBundles?TRANSACTION_ID=&COUNTRY_CODE=UK&COUNTRY_REQ=GBR&API_VERSION=api_v1&BUNDLE_CATEGROY=Post%20Paid%20Bundles,Marketing%20Bundles&LANG=en',
+        3: 'https://paymonthly-ukstage.ldsvcplatform.com/app/api_v1/GeneralSettings/banners?TRANSACTION_ID=&COUNTRY_CODE=UK&COUNTRY_REQ=GBR&API_VERSION=api_v1&BUNDLE_CATEGROY=Post%20Paid%20Bundles&LANG=en',
+        4: 'https://paymonthly-ukstage.ldsvcplatform.com/app/api_v1/GetPages/getFAQs?TRANSACTION_ID=&COUNTRY_CODE=UK&COUNTRY_REQ=GBR&API_VERSION=api_v1&BUNDLE_CATEGROY=Post%20Paid%20Bundles&LANG=en',
+        5: 'https://paymonthly-ukstage.ldsvcplatform.com/app/api_v1/Menu/getMenu?TRANSACTION_ID=&COUNTRY_CODE=UK&COUNTRY_REQ=GBR&API_VERSION=api_v1&BUNDLE_CATEGROY=Post%20Paid%20Bundles&LANG=en',
+        6: 'https://paymonthly-ukstage.ldsvcplatform.com/app/api_v1/GetPPPages/getWhyChooseLyca?TRANSACTION_ID=&COUNTRY_CODE=UK&COUNTRY_REQ=GBR&API_VERSION=api_v1&BUNDLE_CATEGROY=Post%20Paid%20Bundles&LANG=en',
+        7: 'https://paymonthly-ukstage.ldsvcplatform.com/app/api_v1/PostpaidBundles/getAllbundles?TRANSACTION_ID=&COUNTRY_CODE=UK&COUNTRY_REQ=GBR&API_VERSION=api_v1&BUNDLE_CATEGROY=Add%20on%20Bundles&LANG=en'
     };
     
 
    
-    let countryName = prompt("Enter Country Name (at/au/be):").trim().toLowerCase();
+    let countryName = prompt("Enter Country Name (at/au/uk):").trim().toLowerCase();
 
-    if (!['at', 'au','be'].includes(countryName)) {
+    if (!['at', 'au', 'uk'].includes(countryName)) {
         console.error("❌ Unsupported country! Please enter 'at' or 'au'.");
         return;
     }
-
+ 
     const availableCountryAPI = {};
     Object.entries(APIs).forEach(([key, value]) => {
         let newValue = value;
@@ -52,10 +28,8 @@
         } else if (countryName === 'au') {
             newValue = value.replace('.at', '.com.au').replace('AT', 'AU');
             availableCountryAPI[key] = newValue;
-        }else  if (countryName === 'be') {
-            newValue = value.replace('.at', '.be').replace('AT', 'BE');
-            availableCountryAPI[`${key}-en`] = newValue;
-            availableCountryAPI[`${key}-de`] = newValue.replace('lang=en', 'lang=nl');
+        }else if (countryName === 'uk') {
+            availableCountryAPI[key] = newValue;
         }
     });
 
