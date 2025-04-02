@@ -7,6 +7,12 @@ on:
   pull_request:
     branches:
       - main
+      
+permissions:
+  contents: read
+  actions: write
+  artifacts: write  # Ensure artifacts can be uploaded
+
 
 jobs:
   test:
@@ -33,5 +39,5 @@ jobs:
       - name: Upload Playwright Report
         uses: actions/upload-artifact@v2  # Save the report as an artifact (use v2 for stability)
         with:
-          name: playwright-report
+          name: playwright-reports
           path: playwright-reports/  # Path to your report directory
