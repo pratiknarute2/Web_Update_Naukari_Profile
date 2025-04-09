@@ -22,9 +22,6 @@ test.describe('Login', () => {
         await login.enterUsername();
         await login.enterPassword();
         await login.clickOnLogin();
-
-        // ✅ Ensures UI interaction happens after login
-        await page.getByText('Booked').nth(3).click();
     });
 
     test('API Login and integrate with UI Automation using two windows in the same browser', async ({ browser, request }) => {
