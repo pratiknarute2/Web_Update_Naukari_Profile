@@ -1,7 +1,7 @@
 const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
-  retries: 2,
+  retries: 0,
   timeout: 60_000,  // Global test timeout (60 seconds)
   expect: {
     timeout: 10_000,  // Default assertion timeout (10 seconds)
@@ -10,7 +10,7 @@ module.exports = defineConfig({
   use: {
     actionTimeout: 10_000, // Timeout for each action (10 seconds)
     navigationTimeout: 20_000, // Timeout for navigation (20 seconds)
-    headless: true,
+    headless: false,
     launchOptions: {
       args: ['--start-maximized'],
     },
@@ -20,13 +20,13 @@ module.exports = defineConfig({
     outputDir: 'test-results/artifacts', // Store raw artifacts
   },
 
-  projects: [
-    { name: 'chromium', use: { browserName: 'chromium' }, testMatch: ['Tests/Kolonizer.test.js'] },
-    { name: 'firefox', use: { browserName: 'firefox' }, testMatch: ['Tests/Lyca.test.js'] }, // Runs test2 only on Firefox
-  ],
+  // projects: [
+  //   { name: 'chromium', use: { browserName: 'chromium' }, testMatch: ['Tests/Kolonizer.test.js'] },
+  //   { name: 'firefox', use: { browserName: 'firefox' }, testMatch: ['Tests/Lyca.test.js'] }, // Runs test2 only on Firefox
+  // ],
   
   fullyParallel: true,
-  workers: 7, // Set to 1 for debugging; increase for parallel execution
+  workers: 1, // Set to 1 for debugging; increase for parallel execution
 
   reporter: [
     ['list'], // Console output

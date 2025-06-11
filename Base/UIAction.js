@@ -42,25 +42,22 @@ class UIAction {
         console.log('-'.repeat(100));
     }
 
-    async isDisplayed(locator, stepName) {
+    async isDisplay(locator, miliSec, stepName) {
+        await this.page.waitForTimeout(miliSec); 
         process.stdout.write(`🔄 Verifying: ${stepName}...\n`);
         const startTime = performance.now();
-    
-        try {
-            await locator.waitFor({ state: "visible", timeout: 10000 }); // Ensures visibility
-            await locator.scrollIntoViewIfNeeded(); // Ensures element is in view
 
-            await expect(locator).toBeVisible(); // ✅ Fixed missing `await`
-            process.stdout.write(`✅ Found [${stepName}]\n`);
-        } catch (error) {
-            const errorMessage = `❌ Failed to verify visibility of [${stepName}] --> ${error.message}`;
-            process.stdout.write(`${errorMessage}\n`);
-            throw new Error(errorMessage);
-        } finally {
+           const isVisible = await locator.isVisible({ timeout: miliSec });
+            if(isVisible){
+                process.stdout.write(`✅ Found [${stepName}]\n`);
+            }else{
+                 const errorMessage = `❌ Failed to verify visibility of [${stepName}]`;
+                 process.stdout.write(`${errorMessage}\n`);
+            }
             const timeTaken = ((performance.now() - startTime) / 1000).toFixed(2);
             process.stdout.write(`⏳ Time taken: ${timeTaken} sec\n`);
             console.log('-'.repeat(100));
-        }
+            return isVisible
         
     }
     async expectToBe(actual, expected, errorMessage){

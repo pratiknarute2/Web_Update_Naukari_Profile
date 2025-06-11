@@ -8,11 +8,26 @@
     "test:run": "npx playwright test"
   },
   "devDependencies": {
-    "@playwright/test": "^1.51.1"
+    "@playwright/test": "^1.52.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "node-fetch": "^3.3.2"
-  }
+  },
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pratiknarute2/Web_Playwright_JS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/pratiknarute2/Web_Playwright_JS/issues"
+  },
+  "homepage": "https://github.com/pratiknarute2/Web_Playwright_JS#readme"
 }
