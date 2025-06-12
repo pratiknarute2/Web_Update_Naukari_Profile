@@ -10,11 +10,11 @@ module.exports = defineConfig({
   use: {
     actionTimeout: 10_000, // Timeout for each action (10 seconds)
     navigationTimeout: 20_000, // Timeout for navigation (20 seconds)
-    headless: false,
+    headless: false, // Better for bypassing detection
     launchOptions: {
       args: ['--start-maximized'],
     },
-    video: 'on-first-retry', // Capture video only on first retry
+    video: 'on', // Capture video only on first retry
     screenshot: 'only-on-failure', // Capture screenshot only if the test fails
     trace: 'on-first-retry', // Collect trace only on the first retry
     outputDir: 'test-results/artifacts', // Store raw artifacts

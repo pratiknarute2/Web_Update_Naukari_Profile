@@ -42,8 +42,7 @@ class UIAction {
         console.log('-'.repeat(100));
     }
 
-    async isDisplay(locator, miliSec, stepName) {
-        await this.page.waitForTimeout(miliSec); 
+    async isDisplay(locator, miliSec, stepName) { 
         process.stdout.write(`🔄 Verifying: ${stepName}...\n`);
         const startTime = performance.now();
 
