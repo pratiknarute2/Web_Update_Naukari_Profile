@@ -1,32 +1,102 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="23.701926">
-<testsuite name="Tests/UpdateProfile.test.js" timestamp="2025-06-13T04:23:49.375Z" hostname="" tests="1" failures="0" skipped="0" time="23.046" errors="0">
-<testcase name="Update Profile › Update Naukri Profile of Prajwal" classname="Tests/UpdateProfile.test.js" time="23.046">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="23.829185">
+<testsuite name="Tests/UpdateProfile.test.js" timestamp="2025-06-13T14:37:26.561Z" hostname="" tests="2" failures="0" skipped="0" time="45.496" errors="0">
+<testcase name="Update Profile › Update Naukri Profile of Prajwal for Pune Location" classname="Tests/UpdateProfile.test.js" time="23.146">
 <system-out>
 <![CDATA[✅ Navigate On URL: [https://www.naukri.com/]
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Header...
 ✅ Clicked [Login Header]
-⏳ Time taken: 0.80 sec
+⏳ Time taken: 1.82 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Username field...
 ✅ Filled [Username field] with value: prajwalnarute2002@gmail.com
-⏳ Time taken: 0.09 sec
+⏳ Time taken: 0.04 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Password field...
 ✅ Filled [Password field] with value: Prajwal@123
+⏳ Time taken: 0.04 sec
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Login Button...
+✅ Clicked [Login Button]
 ⏳ Time taken: 0.03 sec
+----------------------------------------------------------------------------------------------------
+🔄 Verifying: Welcome Window close Icon...
+❌ Failed to verify visibility of [Welcome Window close Icon]
+⏳ Time taken: 0.01 sec
+----------------------------------------------------------------------------------------------------
+🔄 Verifying: View Profile Button...
+✅ Found [View Profile Button]
+⏳ Time taken: 0.00 sec
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: View Profile Button...
+✅ Clicked [View Profile Button]
+⏳ Time taken: 0.02 sec
+----------------------------------------------------------------------------------------------------
+🔄 Verifying: Update Resume Button...
+✅ Found [Update Resume Button]
+⏳ Time taken: 0.01 sec
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Update Resume Button...
+✅ Clicked [Update Resume Button]
+⏳ Time taken: 0.02 sec
+----------------------------------------------------------------------------------------------------
+currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
+🔄 Clicking: Edit Skill Icon...
+✅ Clicked [Edit Skill Icon]
+⏳ Time taken: 0.02 sec
+----------------------------------------------------------------------------------------------------
+🔄 Verifying: Node.js Skill box...
+❌ Failed to verify visibility of [Node.js Skill box]
+⏳ Time taken: 0.00 sec
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Skill Tab...
+✅ Clicked [Skill Tab]
+⏳ Time taken: 0.31 sec
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Node.js Sugggetion...
+✅ Clicked [Node.js Sugggetion]
+⏳ Time taken: 0.01 sec
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Save Button...
+✅ Clicked [Save Button]
+⏳ Time taken: 0.02 sec
+----------------------------------------------------------------------------------------------------
+
+[[ATTACHMENT|../test-results/Tests-UpdateProfile-Update-04f96-f-Prajwal-for-Pune-Location/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Update Profile › Update Naukri Profile of Prajwal for Banglore Location" classname="Tests/UpdateProfile.test.js" time="22.35">
+<system-out>
+<![CDATA[✅ Navigate On URL: [https://www.naukri.com/]
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Login Header...
+✅ Clicked [Login Header]
+⏳ Time taken: 0.81 sec
+----------------------------------------------------------------------------------------------------
+🔄 Filling: Username field...
+✅ Filled [Username field] with value: prajwalnarute100@gmail.com
+⏳ Time taken: 0.20 sec
+----------------------------------------------------------------------------------------------------
+🔄 Filling: Password field...
+✅ Filled [Password field] with value: Prajwal@123
+⏳ Time taken: 0.04 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Button...
 ✅ Clicked [Login Button]
 ⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
-🔄 Verifying: View Profile Button...
-✅ Found [View Profile Button]
-⏳ Time taken: 0.02 sec
+🔄 Verifying: Welcome Window close Icon...
+❌ Failed to verify visibility of [Welcome Window close Icon]
+⏳ Time taken: 0.01 sec
 ----------------------------------------------------------------------------------------------------
-🔄 Clicking: View Profile Button...
-✅ Clicked [View Profile Button]
-⏳ Time taken: 0.03 sec
+🔄 Verifying: View Profile Button...
+❌ Failed to verify visibility of [View Profile Button]
+⏳ Time taken: 0.01 sec
+----------------------------------------------------------------------------------------------------
+🔄 Clicking: Complete Profile Button...
+✅ Clicked [Complete Profile Button]
+⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Update Resume Button...
 ✅ Found [Update Resume Button]
@@ -42,27 +112,23 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Node.js Skill box...
-✅ Found [Node.js Skill box]
+❌ Failed to verify visibility of [Node.js Skill box]
 ⏳ Time taken: 0.00 sec
-----------------------------------------------------------------------------------------------------
-🔄 Clicking: Node.js Skill box...
-✅ Clicked [Node.js Skill box]
-⏳ Time taken: 0.30 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Skill Tab...
 ✅ Clicked [Skill Tab]
-⏳ Time taken: 0.02 sec
+⏳ Time taken: 0.30 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Node.js Sugggetion...
 ✅ Clicked [Node.js Sugggetion]
-⏳ Time taken: 0.01 sec
+⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Save Button...
 ✅ Clicked [Save Button]
 ⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 
-[[ATTACHMENT|../test-results/Tests-UpdateProfile-Update-6b85a-e-Naukri-Profile-of-Prajwal/video.webm]]
+[[ATTACHMENT|../test-results/Tests-UpdateProfile-Update-b6a48-ajwal-for-Banglore-Location/video.webm]]
 ]]>
 </system-out>
 </testcase>

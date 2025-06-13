@@ -19,11 +19,12 @@ class Job extends UIAction {
         this.editKeySkillIcon =  page.locator('#lazyKeySkills').getByText('editOneTheme')
         this.skillTab =  page.getByRole('textbox', { name: 'Add skills' })
         this.nodeJsCloseIcon =  page.getByTitle('Node.js').getByRole('link')
-       this.nodeJsSuggestion = page.getByText('Node.js').nth(1); 
+       this.nodeJsSuggestion = page.locator("//div[text()='Node.js']")
        this.saveSkillButton = page.getByRole('button', { name: 'Save' })
+       this.closeIconWelcomeWindow =  page.locator('.crossIcon')
     }
 
-  async updateNaukaryProfile(username, password) {
+  async updateNaukaryProfile(username, password, pdfName) {
     // Navigate to Naukri homepage
     await this.navigateOnURL(this.page, 'https://www.naukri.com/');
 
@@ -41,6 +42,10 @@ class Job extends UIAction {
 
     // Check if the "View Profile" button is visible within 3 seconds
     await this.page.waitForTimeout(5000); 
+
+    if(await this.isDisplay(this.closeIconWelcomeWindow,1000,'Welcome Window close Icon')){
+        await this.clickElement(this.closeIconWelcomeWindow,'Welcome Window close Icon')
+    }
     let isVisible = await this.isDisplay(this.viewProfileButton, 10000, 'View Profile Button');
 
     if (isVisible) {
@@ -69,7 +74,7 @@ class Job extends UIAction {
     console.log('currentDir: ' + currentDir);
 
     // Set the file to be uploaded (resume PDF) using the file chooser dialog
-    await fileChooser.setFiles(currentDir + '/Files/Prajwal_Narute.pdf');
+    await fileChooser.setFiles(currentDir + '/Files/'+pdfName);
 
     await this.clickElement(this.editKeySkillIcon, 'Edit Skill Icon')
      if(await this.isDisplay(this.nodeJsCloseIcon,3000,'Node.js Skill box')){
@@ -86,3 +91,4 @@ class Job extends UIAction {
 }
 
 module.exports = Job;
+
