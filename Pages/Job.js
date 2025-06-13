@@ -72,9 +72,12 @@ class Job extends UIAction {
     await fileChooser.setFiles(currentDir + '/Files/Prajwal_Narute.pdf');
 
     await this.clickElement(this.editKeySkillIcon, 'Edit Skill Icon')
-    await this.clickElement(this.nodeJsCloseIcon, 'Node.js Skill box')
+     if(await this.isDisplay(this.nodeJsCloseIcon,3000,'Node.js Skill box')){
+        await this.clickElement(this.nodeJsCloseIcon, 'Node.js Skill box')
+    }
     await this.clickElement(this.skillTab, 'Skill Tab')
-    await this.skillTab.type('Node.j', {delay: 200 });
+    await this.skillTab.type('Node.js', {delay: 200 });
+    await this.page.waitForTimeout(2000); 
     await this.clickElement(this.nodeJsSuggestion,'Node.js Sugggetion')
     await this.clickElement(this.saveSkillButton,'Save Button')
     await this.page.waitForTimeout(5000); 

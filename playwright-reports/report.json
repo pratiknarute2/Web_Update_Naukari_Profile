@@ -99,7 +99,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 19128,
+                      "duration": 23046,
                       "errors": [],
                       "stdout": [
                         {
@@ -115,7 +115,7 @@
                           "text": "✅ Clicked [Login Header]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.15 sec\n"
+                          "text": "⏳ Time taken: 0.80 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -127,7 +127,7 @@
                           "text": "✅ Filled [Username field] with value: prajwalnarute2002@gmail.com\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.09 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -163,7 +163,7 @@
                           "text": "✅ Found [View Profile Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.03 sec\n"
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -175,7 +175,7 @@
                           "text": "✅ Clicked [View Profile Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.04 sec\n"
+                          "text": "⏳ Time taken: 0.03 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -187,7 +187,7 @@
                           "text": "✅ Found [Update Resume Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -215,6 +215,18 @@
                         },
                         {
                           "text": "⏳ Time taken: 0.02 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Node.js Skill box...\n"
+                        },
+                        {
+                          "text": "✅ Found [Node.js Skill box]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.00 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -250,7 +262,7 @@
                           "text": "✅ Clicked [Node.js Sugggetion]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.01 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -270,7 +282,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-06-12T17:17:41.918Z",
+                      "startTime": "2025-06-13T04:23:49.620Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -296,8 +308,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-12T17:17:41.645Z",
-    "duration": 19776.05,
+    "startTime": "2025-06-13T04:23:49.364Z",
+    "duration": 23701.926,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
