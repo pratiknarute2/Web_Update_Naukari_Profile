@@ -43,22 +43,26 @@ class UIAction {
     }
 
     async isDisplay(locator, miliSec, stepName) { 
-        process.stdout.write(`🔄 Verifying: ${stepName}...\n`);
+        let isVisible = false; // <-- Fix: use let
         const startTime = performance.now();
 
-           const isVisible = await locator.isVisible({ timeout: miliSec });
-            if(isVisible){
-                process.stdout.write(`✅ Found [${stepName}]\n`);
-            }else{
-                 const errorMessage = `❌ Failed to verify visibility of [${stepName}]`;
-                 process.stdout.write(`${errorMessage}\n`);
-            }
-            const timeTaken = ((performance.now() - startTime) / 1000).toFixed(2);
-            process.stdout.write(`⏳ Time taken: ${timeTaken} sec\n`);
-            console.log('-'.repeat(100));
-            return isVisible
-        
+        try {
+            process.stdout.write(`🔄 Verifying: ${stepName}...\n`);
+            await locator.waitFor({ state: 'visible', timeout: miliSec }); 
+            isVisible = await locator.isVisible();
+            process.stdout.write(`✅ Found [${stepName}]\n`);
+        } catch {
+            const errorMessage = `❌ Failed to verify visibility of [${stepName}]`;
+            process.stdout.write(`${errorMessage}\n`);
+        }
+
+        const timeTaken = ((performance.now() - startTime) / 1000).toFixed(2);
+        process.stdout.write(`⏳ Time taken: ${timeTaken} sec\n`);
+        console.log('-'.repeat(100));
+
+        return isVisible;
     }
+
     async expectToBe(actual, expected, errorMessage){
         console.log(`Actual: ${actual} | Expected: ${expected}`)
         try{
@@ -70,8 +74,8 @@ class UIAction {
         }finally{
             console.log('-'.repeat(100));
         }
-       
-    }
+    
+}
     async navigateOnURL(page, url) {
         try {
             await page.goto(url, { waitUntil: "domcontentloaded" }); // Navigate and wait for the page to load

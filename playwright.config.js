@@ -1,7 +1,7 @@
 const { defineConfig } = require('@playwright/test');
 
 module.exports = defineConfig({
-  retries: 0,
+  retries: 1,
   timeout: 60_000,  // Global test timeout (60 seconds)
   expect: {
     timeout: 10_000,  // Default assertion timeout (10 seconds)

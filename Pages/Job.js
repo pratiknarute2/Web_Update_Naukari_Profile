@@ -11,7 +11,7 @@ class Job extends UIAction {
         this.passTab = page.getByRole('textbox', { name: 'Enter your password' });
         this.loginButton = page.getByRole('button', { name: 'Login', exact: true });
         this.loginHeader = page.getByRole('link', { name: 'Login', exact: true });
-        this.viewProfileButton = page.getByRole('link', { name: 'View profile' });
+        this.viewProfileButton = page.locator("//p[text()='Last updated ']/following-sibling::div//a[@href='/mnjuser/profile']")
         this.completeProfileButton = page.locator("//a[text()='Complete']");
 
         this.updateResumeButton = page.getByRole('button', { name: 'Update resume' });
@@ -40,13 +40,13 @@ class Job extends UIAction {
     // Click the login button to submit credentials
     await this.clickElement(this.loginButton, 'Login Button');
 
-    // Check if the "View Profile" button is visible within 3 seconds
+    // Check if the "View Profile" button is visible within 5 seconds
     await this.page.waitForTimeout(5000); 
 
     if(await this.isDisplay(this.closeIconWelcomeWindow,1000,'Welcome Window close Icon')){
         await this.clickElement(this.closeIconWelcomeWindow,'Welcome Window close Icon')
     }
-    let isVisible = await this.isDisplay(this.viewProfileButton, 10000, 'View Profile Button');
+    let isVisible = await this.isDisplay(this.viewProfileButton, 4000, 'View Profile Button');
 
     if (isVisible) {
         // If visible, click on "View Profile" button to proceed

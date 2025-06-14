@@ -48,7 +48,7 @@
       {
         "outputDir": "/Users/pratiknarute/Automation/Web_Playwright_JS/test-results",
         "repeatEach": 1,
-        "retries": 0,
+        "retries": 1,
         "metadata": {
           "actualWorkers": 2
         },
@@ -99,7 +99,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 23146,
+                      "duration": 23292,
                       "errors": [],
                       "stdout": [
                         {
@@ -115,7 +115,7 @@
                           "text": "✅ Clicked [Login Header]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 1.82 sec\n"
+                          "text": "⏳ Time taken: 0.81 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -127,7 +127,7 @@
                           "text": "✅ Filled [Username field] with value: prajwalnarute2002@gmail.com\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.04 sec\n"
+                          "text": "⏳ Time taken: 0.29 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -139,7 +139,7 @@
                           "text": "✅ Filled [Password field] with value: Prajwal@123\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.04 sec\n"
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -151,7 +151,7 @@
                           "text": "✅ Clicked [Login Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.03 sec\n"
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -163,7 +163,7 @@
                           "text": "❌ Failed to verify visibility of [Welcome Window close Icon]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 1.00 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -199,7 +199,7 @@
                           "text": "✅ Found [Update Resume Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 0.03 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -211,7 +211,7 @@
                           "text": "✅ Clicked [Update Resume Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.04 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -235,10 +235,22 @@
                           "text": "🔄 Verifying: Node.js Skill box...\n"
                         },
                         {
-                          "text": "❌ Failed to verify visibility of [Node.js Skill box]\n"
+                          "text": "✅ Found [Node.js Skill box]\n"
                         },
                         {
                           "text": "⏳ Time taken: 0.00 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Node.js Skill box...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Node.js Skill box]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.30 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -250,7 +262,7 @@
                           "text": "✅ Clicked [Skill Tab]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.31 sec\n"
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -262,7 +274,7 @@
                           "text": "✅ Clicked [Node.js Sugggetion]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 0.04 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -282,7 +294,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-06-13T14:37:26.826Z",
+                      "startTime": "2025-06-14T08:42:53.503Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -317,7 +329,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "passed",
-                      "duration": 22350,
+                      "duration": 23299,
                       "errors": [],
                       "stdout": [
                         {
@@ -345,7 +357,7 @@
                           "text": "✅ Filled [Username field] with value: prajwalnarute100@gmail.com\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.20 sec\n"
+                          "text": "⏳ Time taken: 0.30 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -357,7 +369,7 @@
                           "text": "✅ Filled [Password field] with value: Prajwal@123\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.04 sec\n"
+                          "text": "⏳ Time taken: 0.03 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -381,7 +393,7 @@
                           "text": "❌ Failed to verify visibility of [Welcome Window close Icon]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 1.00 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -390,22 +402,22 @@
                           "text": "🔄 Verifying: View Profile Button...\n"
                         },
                         {
-                          "text": "❌ Failed to verify visibility of [View Profile Button]\n"
+                          "text": "✅ Found [View Profile Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 0.00 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
                         },
                         {
-                          "text": "🔄 Clicking: Complete Profile Button...\n"
+                          "text": "🔄 Clicking: View Profile Button...\n"
                         },
                         {
-                          "text": "✅ Clicked [Complete Profile Button]\n"
+                          "text": "✅ Clicked [View Profile Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.03 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -453,10 +465,22 @@
                           "text": "🔄 Verifying: Node.js Skill box...\n"
                         },
                         {
-                          "text": "❌ Failed to verify visibility of [Node.js Skill box]\n"
+                          "text": "✅ Found [Node.js Skill box]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.00 sec\n"
+                          "text": "⏳ Time taken: 0.79 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Node.js Skill box...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Node.js Skill box]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -468,7 +492,7 @@
                           "text": "✅ Clicked [Skill Tab]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.30 sec\n"
+                          "text": "⏳ Time taken: 0.03 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -480,7 +504,7 @@
                           "text": "✅ Clicked [Node.js Sugggetion]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.04 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -500,7 +524,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-06-13T14:37:26.824Z",
+                      "startTime": "2025-06-14T08:42:53.500Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -526,8 +550,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-06-13T14:37:26.548Z",
-    "duration": 23829.184999999998,
+    "startTime": "2025-06-14T08:42:53.207Z",
+    "duration": 24056.706,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,
