@@ -1,20 +1,20 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="24.056706">
-<testsuite name="Tests/UpdateProfile.test.js" timestamp="2025-06-14T08:42:53.239Z" hostname="" tests="2" failures="0" skipped="0" time="46.591" errors="0">
-<testcase name="Update Profile › Update Naukri Profile of Prajwal for Pune Location" classname="Tests/UpdateProfile.test.js" time="23.292">
+<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="28.467449000000002">
+<testsuite name="Tests/UpdateProfile.test.js" timestamp="2025-07-09T19:24:43.521Z" hostname="" tests="2" failures="0" skipped="0" time="52.53" errors="0">
+<testcase name="Update Profile › Update Naukri Profile of Prajwal for Pune Location" classname="Tests/UpdateProfile.test.js" time="27.487">
 <system-out>
 <![CDATA[✅ Navigate On URL: [https://www.naukri.com/]
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Header...
 ✅ Clicked [Login Header]
-⏳ Time taken: 0.81 sec
+⏳ Time taken: 3.85 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Username field...
 ✅ Filled [Username field] with value: prajwalnarute2002@gmail.com
-⏳ Time taken: 0.29 sec
+⏳ Time taken: 0.21 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Password field...
 ✅ Filled [Password field] with value: Prajwal@123
-⏳ Time taken: 0.02 sec
+⏳ Time taken: 0.03 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Button...
 ✅ Clicked [Login Button]
@@ -34,11 +34,11 @@
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Update Resume Button...
 ✅ Found [Update Resume Button]
-⏳ Time taken: 0.03 sec
+⏳ Time taken: 0.01 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Update Resume Button...
 ✅ Clicked [Update Resume Button]
-⏳ Time taken: 0.04 sec
+⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 🔄 Clicking: Edit Skill Icon...
@@ -47,7 +47,7 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Node.js Skill box...
 ✅ Found [Node.js Skill box]
-⏳ Time taken: 0.00 sec
+⏳ Time taken: 0.01 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Node.js Skill box...
 ✅ Clicked [Node.js Skill box]
@@ -59,7 +59,7 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Node.js Sugggetion...
 ✅ Clicked [Node.js Sugggetion]
-⏳ Time taken: 0.04 sec
+⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Save Button...
 ✅ Clicked [Save Button]
@@ -70,21 +70,21 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ]]>
 </system-out>
 </testcase>
-<testcase name="Update Profile › Update Naukri Profile of Prajwal for Banglore Location" classname="Tests/UpdateProfile.test.js" time="23.299">
+<testcase name="Update Profile › Update Naukri Profile of Prajwal for Banglore Location" classname="Tests/UpdateProfile.test.js" time="25.043">
 <system-out>
 <![CDATA[✅ Navigate On URL: [https://www.naukri.com/]
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Header...
 ✅ Clicked [Login Header]
-⏳ Time taken: 0.81 sec
+⏳ Time taken: 1.53 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Username field...
 ✅ Filled [Username field] with value: prajwalnarute100@gmail.com
-⏳ Time taken: 0.30 sec
+⏳ Time taken: 0.08 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Password field...
 ✅ Filled [Password field] with value: Prajwal@123
-⏳ Time taken: 0.03 sec
+⏳ Time taken: 0.05 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Button...
 ✅ Clicked [Login Button]
@@ -96,7 +96,7 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: View Profile Button...
 ✅ Found [View Profile Button]
-⏳ Time taken: 0.00 sec
+⏳ Time taken: 0.01 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: View Profile Button...
 ✅ Clicked [View Profile Button]
@@ -104,11 +104,11 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Update Resume Button...
 ✅ Found [Update Resume Button]
-⏳ Time taken: 0.02 sec
+⏳ Time taken: 0.03 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Update Resume Button...
 ✅ Clicked [Update Resume Button]
-⏳ Time taken: 0.03 sec
+⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 🔄 Clicking: Edit Skill Icon...
@@ -117,11 +117,11 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Node.js Skill box...
 ✅ Found [Node.js Skill box]
-⏳ Time taken: 0.79 sec
+⏳ Time taken: 0.00 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Node.js Skill box...
 ✅ Clicked [Node.js Skill box]
-⏳ Time taken: 0.02 sec
+⏳ Time taken: 0.30 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Skill Tab...
 ✅ Clicked [Skill Tab]
@@ -129,7 +129,7 @@ currentDir: /Users/pratiknarute/Automation/Web_Playwright_JS
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Node.js Sugggetion...
 ✅ Clicked [Node.js Sugggetion]
-⏳ Time taken: 0.04 sec
+⏳ Time taken: 0.02 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Save Button...
 ✅ Clicked [Save Button]

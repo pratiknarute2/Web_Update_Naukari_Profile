@@ -81,7 +81,8 @@ class Job extends UIAction {
         await this.clickElement(this.nodeJsCloseIcon, 'Node.js Skill box')
     }
     await this.clickElement(this.skillTab, 'Skill Tab')
-    await this.skillTab.type('Node.js', {delay: 200 });
+    await this.page.waitForTimeout(1000); // waits for 5 seconds
+    await this.skillTab.type('Node.js', {delay: 300 });
     await this.page.waitForTimeout(2000); 
     await this.clickElement(this.nodeJsSuggestion,'Node.js Sugggetion')
     await this.clickElement(this.saveSkillButton,'Save Button')
