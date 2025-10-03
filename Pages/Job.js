@@ -11,85 +11,86 @@ class Job extends UIAction {
         this.passTab = page.getByRole('textbox', { name: 'Enter your password' });
         this.loginButton = page.getByRole('button', { name: 'Login', exact: true });
         this.loginHeader = page.getByRole('link', { name: 'Login', exact: true });
-        this.viewProfileButton = page.locator("//p[text()='Last updated ']/following-sibling::div//a[@href='/mnjuser/profile']")
+        this.viewProfileButton = page.locator("//p[text()='Last updated ']/following-sibling::div//a[@href='/mnjuser/profile']");
         this.completeProfileButton = page.locator("//a[text()='Complete']");
 
         this.updateResumeButton = page.getByRole('button', { name: 'Update resume' });
         this.uploadResumeLink = page.locator("//span[text()='Upload resume']");
-        this.editKeySkillIcon =  page.locator('#lazyKeySkills').getByText('editOneTheme')
-        this.skillTab =  page.getByRole('textbox', { name: 'Add skills' })
-        this.nodeJsCloseIcon =  page.getByTitle('Node.js').getByRole('link')
-       this.nodeJsSuggestion = page.locator("//div[text()='Node.js']")
-       this.saveSkillButton = page.getByRole('button', { name: 'Save' })
-       this.closeIconWelcomeWindow =  page.locator('.crossIcon')
+        this.editKeySkillIcon = page.locator('#lazyKeySkills').getByText('editOneTheme');
+        this.skillTab = page.getByRole('textbox', { name: 'Add skills' });
+        this.saveSkillButton = page.getByRole('button', { name: 'Save' });
+        this.closeIconWelcomeWindow = page.locator('.crossIcon');
     }
 
-  async updateNaukaryProfile(username, password, pdfName) {
-    // Navigate to Naukri homepage
-    await this.navigateOnURL(this.page, 'https://www.naukri.com/');
+    async updateNaukaryProfile(username, password, pdfName, skillName) {
+        // Navigate to Naukri homepage
+        await this.navigateOnURL(this.page, 'https://www.naukri.com/');
 
-    // Click on the login header to open login form
-    await this.clickElement(this.loginHeader, 'Login Header');
+        // Click on the login header
+        await this.clickElement(this.loginHeader, 'Login Header');
 
-    // Enter username/email in the login input field
-    await this.fillInputField(this.emailTab, username, 'Username field');
+        // Enter credentials
+        await this.fillInputField(this.emailTab, username, 'Username field');
+        await this.fillInputField(this.passTab, password, 'Password field');
+        await this.clickElement(this.loginButton, 'Login Button');
 
-    // Enter password in the password input field
-    await this.fillInputField(this.passTab, password, 'Password field');
+        // Wait after login
+        await this.page.waitForTimeout(5000);
 
-    // Click the login button to submit credentials
-    await this.clickElement(this.loginButton, 'Login Button');
+        // Close welcome popup if displayed
+        if (await this.isDisplay(this.closeIconWelcomeWindow, 1000, 'Welcome Window close Icon')) {
+            await this.clickElement(this.closeIconWelcomeWindow, 'Welcome Window close Icon');
+        }
 
-    // Check if the "View Profile" button is visible within 5 seconds
-    await this.page.waitForTimeout(5000); 
+        // Go to profile
+        let isVisible = await this.isDisplay(this.viewProfileButton, 4000, 'View Profile Button');
+        if (isVisible) {
+            await this.clickElement(this.viewProfileButton, 'View Profile Button');
+        } else {
+            await this.clickElement(this.completeProfileButton, 'Complete Profile Button');
+        }
 
-    if(await this.isDisplay(this.closeIconWelcomeWindow,1000,'Welcome Window close Icon')){
-        await this.clickElement(this.closeIconWelcomeWindow,'Welcome Window close Icon')
+        // Resume upload
+        await this.page.waitForTimeout(4000);
+        isVisible = await this.isDisplay(this.updateResumeButton, 2000, 'Update Resume Button');
+
+        const [fileChooser] = await Promise.all([
+            this.page.waitForEvent('filechooser'),
+            isVisible
+                ? this.clickElement(this.updateResumeButton, 'Update Resume Button')
+                : this.clickElement(this.uploadResumeLink, 'Upload Resume Link')
+        ]);
+
+        const currentDir = process.cwd();
+        await fileChooser.setFiles(`${currentDir}/Files/${pdfName}`);
+
+        // Edit skills
+        await this.clickElement(this.editKeySkillIcon, 'Edit Skill Icon');
+
+        // Build dynamic close icon locator
+        let closeIconLocator = this.page.locator(`//span[text()='${skillName}']/following-sibling::a`);
+
+        if (await this.isDisplay(closeIconLocator, 3000, `${skillName} Skill box close icon`)) {
+            await this.clickElement(closeIconLocator, `${skillName} Skill box close icon`);
+        }
+
+        // Add new skill
+        await this.clickElement(this.skillTab, 'Skill Tab');
+        await this.page.waitForTimeout(1000);
+        await this.skillTab.type(skillName, { delay: 300 });
+        await this.page.waitForTimeout(2000);
+
+        // Pick skill suggestion from dropdown only
+        let suggestionTextLocator = this.page
+            .locator('#sugDrp_keySkillSugg')
+            .getByText(skillName, { exact: true });
+
+        await this.clickElement(suggestionTextLocator, `${skillName} Suggestion`);
+
+        // Save skill
+        await this.clickElement(this.saveSkillButton, 'Save Button');
+        await this.page.waitForTimeout(5000);
     }
-    let isVisible = await this.isDisplay(this.viewProfileButton, 4000, 'View Profile Button');
-
-    if (isVisible) {
-        // If visible, click on "View Profile" button to proceed
-        await this.clickElement(this.viewProfileButton, 'View Profile Button');
-    } else {
-        // Otherwise, click on "Complete Profile" button (likely for new users)
-        await this.clickElement(this.completeProfileButton, 'Complete Profile Button');
-    }
-
-    // Check if "Update Resume" button is visible within 2 seconds
-    await this.page.waitForTimeout(4000); 
-    isVisible = await this.isDisplay(this.updateResumeButton, 2000, 'Update Resume Button');
-
-    // Wait for the file chooser event triggered by clicking the resume upload element
-    const [fileChooser] = await Promise.all([
-        this.page.waitForEvent('filechooser'),
-        // Click either the update or upload resume button based on visibility
-        isVisible
-            ? this.clickElement(this.updateResumeButton, 'Update Resume Button')
-            : this.clickElement(this.uploadResumeLink, 'Upload Resume Link')
-    ]);
-
-    // Get the current working directory path (where script is running)
-    const currentDir = process.cwd();
-    console.log('currentDir: ' + currentDir);
-
-    // Set the file to be uploaded (resume PDF) using the file chooser dialog
-    await fileChooser.setFiles(currentDir + '/Files/'+pdfName);
-
-    await this.clickElement(this.editKeySkillIcon, 'Edit Skill Icon')
-     if(await this.isDisplay(this.nodeJsCloseIcon,3000,'Node.js Skill box')){
-        await this.clickElement(this.nodeJsCloseIcon, 'Node.js Skill box')
-    }
-    await this.clickElement(this.skillTab, 'Skill Tab')
-    await this.page.waitForTimeout(1000); // waits for 5 seconds
-    await this.skillTab.type('Node.js', {delay: 300 });
-    await this.page.waitForTimeout(2000); 
-    await this.clickElement(this.nodeJsSuggestion,'Node.js Sugggetion')
-    await this.clickElement(this.saveSkillButton,'Save Button')
-    await this.page.waitForTimeout(5000); 
-}
-
 }
 
 module.exports = Job;
-
