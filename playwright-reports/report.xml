@@ -1,24 +1,24 @@
-<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="23.632251">
-<testsuite name="Tests/UpdateProfile.test.js" timestamp="2025-11-26T18:42:50.898Z" hostname="" tests="1" failures="0" skipped="0" time="22.878" errors="0">
-<testcase name="Update Profile › Update Naukri Profile of Prajwal for Hyderabad Location" classname="Tests/UpdateProfile.test.js" time="22.878">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="27.977173000000004">
+<testsuite name="Tests/UpdateProfile.test.js" timestamp="2026-02-01T13:38:51.293Z" hostname="" tests="1" failures="0" skipped="0" time="26.202" errors="0">
+<testcase name="Update Profile › Update Naukri Profile of Narendra for Bhopal Location" classname="Tests/UpdateProfile.test.js" time="26.202">
 <system-out>
 <![CDATA[✅ Navigate On URL: [https://www.naukri.com/]
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Header...
 ✅ Clicked [Login Header]
-⏳ Time taken: 0.07 sec
+⏳ Time taken: 0.38 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Username field...
-✅ Filled [Username field] with value: prajwalnarute12@gmail.com
-⏳ Time taken: 0.03 sec
+✅ Filled [Username field] with value: narendraahirwar0306@gmail.com
+⏳ Time taken: 0.84 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Filling: Password field...
-✅ Filled [Password field] with value: Prajwal@123
-⏳ Time taken: 0.03 sec
+✅ Filled [Password field] with value: Narendra.@123
+⏳ Time taken: 0.09 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Login Button...
 ✅ Clicked [Login Button]
-⏳ Time taken: 0.04 sec
+⏳ Time taken: 0.07 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Welcome Window close Icon...
 ❌ Failed to verify visibility of [Welcome Window close Icon]
@@ -34,15 +34,15 @@
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Update Resume Button...
 ✅ Found [Update Resume Button]
-⏳ Time taken: 0.03 sec
+⏳ Time taken: 0.01 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Update Resume Button...
 ✅ Clicked [Update Resume Button]
-⏳ Time taken: 0.01 sec
+⏳ Time taken: 0.04 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Edit Skill Icon...
 ✅ Clicked [Edit Skill Icon]
-⏳ Time taken: 0.02 sec
+⏳ Time taken: 0.03 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Verifying: Node.js Skill box close icon...
 ✅ Found [Node.js Skill box close icon]
@@ -50,11 +50,11 @@
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Node.js Skill box close icon...
 ✅ Clicked [Node.js Skill box close icon]
-⏳ Time taken: 0.30 sec
+⏳ Time taken: 0.24 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Skill Tab...
 ✅ Clicked [Skill Tab]
-⏳ Time taken: 0.02 sec
+⏳ Time taken: 0.06 sec
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Node.js Suggestion...
 ✅ Clicked [Node.js Suggestion]
@@ -62,10 +62,10 @@
 ----------------------------------------------------------------------------------------------------
 🔄 Clicking: Save Button...
 ✅ Clicked [Save Button]
-⏳ Time taken: 0.02 sec
+⏳ Time taken: 0.04 sec
 ----------------------------------------------------------------------------------------------------
 
-[[ATTACHMENT|../test-results/Tests-UpdateProfile-Update-6f87e-jwal-for-Hyderabad-Location/video.webm]]
+[[ATTACHMENT|../test-results/Tests-UpdateProfile-Update-e928b-arendra-for-Bhopal-Location/video.webm]]
 ]]>
 </system-out>
 </testcase>

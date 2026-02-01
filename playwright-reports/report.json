@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "/Users/pratiknarute/Automation/Web_Naukari_Profile_Update/playwright.config.js",
-    "rootDir": "/Users/pratiknarute/Automation/Web_Naukari_Profile_Update",
+    "configFile": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile/playwright.config.js",
+    "rootDir": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile",
     "forbidOnly": false,
     "fullyParallel": true,
     "globalSetup": null,
@@ -46,7 +46,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "/Users/pratiknarute/Automation/Web_Naukari_Profile_Update/test-results",
+        "outputDir": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile/test-results",
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
@@ -54,7 +54,7 @@
         },
         "id": "",
         "name": "",
-        "testDir": "/Users/pratiknarute/Automation/Web_Naukari_Profile_Update",
+        "testDir": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -65,8 +65,8 @@
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
-    "version": "1.52.0",
-    "workers": 2,
+    "version": "1.56.0",
+    "workers": 3,
     "webServer": null
   },
   "suites": [
@@ -84,7 +84,7 @@
           "column": 15,
           "specs": [
             {
-              "title": "Update Naukri Profile of Prajwal for Hyderabad Location",
+              "title": "Update Naukri Profile of Narendra for Bhopal Location",
               "ok": true,
               "tags": [],
               "tests": [
@@ -99,7 +99,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 22878,
+                      "duration": 26202,
                       "errors": [],
                       "stdout": [
                         {
@@ -115,7 +115,7 @@
                           "text": "✅ Clicked [Login Header]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.07 sec\n"
+                          "text": "⏳ Time taken: 0.38 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -124,10 +124,10 @@
                           "text": "🔄 Filling: Username field...\n"
                         },
                         {
-                          "text": "✅ Filled [Username field] with value: prajwalnarute12@gmail.com\n"
+                          "text": "✅ Filled [Username field] with value: narendraahirwar0306@gmail.com\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.03 sec\n"
+                          "text": "⏳ Time taken: 0.84 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -136,10 +136,10 @@
                           "text": "🔄 Filling: Password field...\n"
                         },
                         {
-                          "text": "✅ Filled [Password field] with value: Prajwal@123\n"
+                          "text": "✅ Filled [Password field] with value: Narendra.@123\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.03 sec\n"
+                          "text": "⏳ Time taken: 0.09 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -151,7 +151,7 @@
                           "text": "✅ Clicked [Login Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.04 sec\n"
+                          "text": "⏳ Time taken: 0.07 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -199,7 +199,7 @@
                           "text": "✅ Found [Update Resume Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.03 sec\n"
+                          "text": "⏳ Time taken: 0.01 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -211,7 +211,7 @@
                           "text": "✅ Clicked [Update Resume Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 0.04 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -223,7 +223,7 @@
                           "text": "✅ Clicked [Edit Skill Icon]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.03 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -247,7 +247,7 @@
                           "text": "✅ Clicked [Node.js Skill box close icon]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.30 sec\n"
+                          "text": "⏳ Time taken: 0.24 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -259,7 +259,7 @@
                           "text": "✅ Clicked [Skill Tab]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.06 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -283,7 +283,7 @@
                           "text": "✅ Clicked [Save Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.02 sec\n"
+                          "text": "⏳ Time taken: 0.04 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -291,13 +291,13 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-11-26T18:42:51.148Z",
+                      "startTime": "2026-02-01T13:38:51.609Z",
                       "annotations": [],
                       "attachments": [
                         {
                           "name": "video",
                           "contentType": "video/webm",
-                          "path": "/Users/pratiknarute/Automation/Web_Naukari_Profile_Update/test-results/Tests-UpdateProfile-Update-6f87e-jwal-for-Hyderabad-Location/video.webm"
+                          "path": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile/test-results/Tests-UpdateProfile-Update-e928b-arendra-for-Bhopal-Location/video.webm"
                         }
                       ]
                     }
@@ -305,9 +305,9 @@
                   "status": "expected"
                 }
               ],
-              "id": "ccff35a210d2693eed42-eb2fe2c4518346b7dcdd",
+              "id": "ccff35a210d2693eed42-3f851597b909d0e221d3",
               "file": "Tests/UpdateProfile.test.js",
-              "line": 13,
+              "line": 22,
               "column": 5
             }
           ]
@@ -317,8 +317,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-11-26T18:42:50.881Z",
-    "duration": 23632.251,
+    "startTime": "2026-02-01T13:38:51.272Z",
+    "duration": 27977.173000000003,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
