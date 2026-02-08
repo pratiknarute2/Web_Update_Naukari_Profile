@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 3
     },
     "preserveOutput": "always",
     "reporter": [
@@ -50,7 +50,7 @@
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 3
         },
         "id": "",
         "name": "",
@@ -84,7 +84,7 @@
           "column": 15,
           "specs": [
             {
-              "title": "Update Naukri Profile of Narendra for Bhopal Location",
+              "title": "Update Naukri Profile of Prajwal for Pune Location",
               "ok": true,
               "tags": [],
               "tests": [
@@ -99,7 +99,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "passed",
-                      "duration": 26202,
+                      "duration": 31907,
                       "errors": [],
                       "stdout": [
                         {
@@ -115,7 +115,7 @@
                           "text": "✅ Clicked [Login Header]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.38 sec\n"
+                          "text": "⏳ Time taken: 0.42 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -124,10 +124,10 @@
                           "text": "🔄 Filling: Username field...\n"
                         },
                         {
-                          "text": "✅ Filled [Username field] with value: narendraahirwar0306@gmail.com\n"
+                          "text": "✅ Filled [Username field] with value: prajwalnarute2002@gmail.com\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.84 sec\n"
+                          "text": "⏳ Time taken: 0.54 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -136,10 +136,10 @@
                           "text": "🔄 Filling: Password field...\n"
                         },
                         {
-                          "text": "✅ Filled [Password field] with value: Narendra.@123\n"
+                          "text": "✅ Filled [Password field] with value: Prajwal@123\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.09 sec\n"
+                          "text": "⏳ Time taken: 0.17 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -151,7 +151,879 @@
                           "text": "✅ Clicked [Login Button]\n"
                         },
                         {
+                          "text": "⏳ Time taken: 0.08 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Welcome Window close Icon...\n"
+                        },
+                        {
+                          "text": "❌ Failed to verify visibility of [Welcome Window close Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 1.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.04 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.02 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.03 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Edit Skill Icon...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Edit Skill Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.03 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Scalability Skill box close icon...\n"
+                        },
+                        {
+                          "text": "❌ Failed to verify visibility of [Scalability Skill box close icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 3.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Skill Tab...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Skill Tab]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.04 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Scalability Suggestion...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Scalability Suggestion]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.04 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Save Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Save Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.03 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-08T16:47:48.099Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile/test-results/Tests-UpdateProfile-Update-04f96-f-Prajwal-for-Pune-Location/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ccff35a210d2693eed42-fcb4d378b5cf3bc686cc",
+              "file": "Tests/UpdateProfile.test.js",
+              "line": 5,
+              "column": 5
+            },
+            {
+              "title": "Update Naukri Profile of Prajwal for Banglore Location",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 31938,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Navigate On URL: [https://www.naukri.com/]\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Header...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Header]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 1.23 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Username field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Username field] with value: prajwalnarute100@gmail.com\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.20 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Password field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Password field] with value: Prajwal@123\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.10 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.06 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Welcome Window close Icon...\n"
+                        },
+                        {
+                          "text": "❌ Failed to verify visibility of [Welcome Window close Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 1.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.06 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.02 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Edit Skill Icon...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Edit Skill Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.03 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Scalability Skill box close icon...\n"
+                        },
+                        {
+                          "text": "❌ Failed to verify visibility of [Scalability Skill box close icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 3.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Skill Tab...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Skill Tab]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Scalability Suggestion...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Scalability Suggestion]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.06 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Save Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Save Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.59 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-08T16:47:48.094Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile/test-results/Tests-UpdateProfile-Update-b6a48-ajwal-for-Banglore-Location/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ccff35a210d2693eed42-fccdaaf909eff39da5b9",
+              "file": "Tests/UpdateProfile.test.js",
+              "line": 9,
+              "column": 5
+            },
+            {
+              "title": "Update Naukri Profile of Prajwal for Hyderabad Location",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 31935,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Navigate On URL: [https://www.naukri.com/]\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Header...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Header]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.55 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Username field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Username field] with value: prajwalnarute12@gmail.com\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.15 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Password field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Password field] with value: Prajwal@123\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.16 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.08 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Welcome Window close Icon...\n"
+                        },
+                        {
+                          "text": "❌ Failed to verify visibility of [Welcome Window close Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 1.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.06 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.02 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.06 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Edit Skill Icon...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Edit Skill Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Scalability Skill box close icon...\n"
+                        },
+                        {
+                          "text": "❌ Failed to verify visibility of [Scalability Skill box close icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 3.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Skill Tab...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Skill Tab]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.06 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Scalability Suggestion...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Scalability Suggestion]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Save Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Save Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.30 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-08T16:47:48.093Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile/test-results/Tests-UpdateProfile-Update-6f87e-jwal-for-Hyderabad-Location/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ccff35a210d2693eed42-eb2fe2c4518346b7dcdd",
+              "file": "Tests/UpdateProfile.test.js",
+              "line": 13,
+              "column": 5
+            },
+            {
+              "title": "Update Naukri Profile of Pratik for Mumbai Location",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 24588,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Navigate On URL: [https://www.naukri.com/]\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Header...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Header]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.40 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Username field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Username field] with value: pratiknarute2@gmail.com\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Password field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Password field] with value: Pratik@123\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.04 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.04 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Welcome Window close Icon...\n"
+                        },
+                        {
+                          "text": "❌ Failed to verify visibility of [Welcome Window close Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 1.00 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.00 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: View Profile Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [View Profile Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.04 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Found [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.03 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Update Resume Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Update Resume Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Edit Skill Icon...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Edit Skill Icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.08 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Verifying: Python Skill box close icon...\n"
+                        },
+                        {
+                          "text": "✅ Found [Python Skill box close icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.01 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Python Skill box close icon...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Python Skill box close icon]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.23 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Skill Tab...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Skill Tab]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Python Suggestion...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Python Suggestion]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.03 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Save Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Save Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.04 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-02-08T16:48:21.685Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/pratikpandurangnarute/Automated_Scripts/Web_Update_Naukari_Profile/test-results/Tests-UpdateProfile-Update-bfbb6--Pratik-for-Mumbai-Location/video.webm"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "ccff35a210d2693eed42-ba8c471594888723fb8d",
+              "file": "Tests/UpdateProfile.test.js",
+              "line": 17,
+              "column": 5
+            },
+            {
+              "title": "Update Naukri Profile of Narendra for Bhopal Location",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 60000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "",
+                  "projectName": "",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 25376,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "✅ Navigate On URL: [https://www.naukri.com/]\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Header...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Header]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 1.09 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Username field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Username field] with value: narendraahirwar0306@gmail.com\n"
+                        },
+                        {
                           "text": "⏳ Time taken: 0.07 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Filling: Password field...\n"
+                        },
+                        {
+                          "text": "✅ Filled [Password field] with value: Narendra.@123\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.05 sec\n"
+                        },
+                        {
+                          "text": "----------------------------------------------------------------------------------------------------\n"
+                        },
+                        {
+                          "text": "🔄 Clicking: Login Button...\n"
+                        },
+                        {
+                          "text": "✅ Clicked [Login Button]\n"
+                        },
+                        {
+                          "text": "⏳ Time taken: 0.26 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -199,7 +1071,7 @@
                           "text": "✅ Found [Update Resume Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.01 sec\n"
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -235,7 +1107,7 @@
                           "text": "✅ Found [Node.js Skill box close icon]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.00 sec\n"
+                          "text": "⏳ Time taken: 0.02 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -247,7 +1119,7 @@
                           "text": "✅ Clicked [Node.js Skill box close icon]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.24 sec\n"
+                          "text": "⏳ Time taken: 0.25 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -259,7 +1131,7 @@
                           "text": "✅ Clicked [Skill Tab]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.06 sec\n"
+                          "text": "⏳ Time taken: 0.04 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -283,7 +1155,7 @@
                           "text": "✅ Clicked [Save Button]\n"
                         },
                         {
-                          "text": "⏳ Time taken: 0.04 sec\n"
+                          "text": "⏳ Time taken: 0.06 sec\n"
                         },
                         {
                           "text": "----------------------------------------------------------------------------------------------------\n"
@@ -291,7 +1163,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-02-01T13:38:51.609Z",
+                      "startTime": "2026-02-08T16:48:21.691Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -317,9 +1189,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-02-01T13:38:51.272Z",
-    "duration": 27977.173000000003,
-    "expected": 1,
+    "startTime": "2026-02-08T16:47:47.687Z",
+    "duration": 59647.885,
+    "expected": 5,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
